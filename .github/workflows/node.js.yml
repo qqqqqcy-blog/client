@@ -18,15 +18,18 @@ jobs:
 
     steps:
     - name: Git Checkout
-    - uses: actions/checkout@v2
+      uses: actions/checkout@v2
       with:
         ref: master
+        
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+
     - name: Build Project
       run: npm install && npm run build
+      
     - name: Deploy to aliyun server
       uses: easingthemes/ssh-deploy@v2.1.2
       env:
