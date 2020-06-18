@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [12.x]
 
     steps:
     - name: Git Checkout
@@ -35,9 +35,6 @@ jobs:
       env:
           SSH_PRIVATE_KEY: ${{ secrets.ALIYUN_SERVER_ACCESS_TOKEN }}
           ARGS: "-avzr --delete"
-          SOURCE: dist
+          SOURCE: build
           REMOTE_HOST: ${{ secrets.ALIYUN_SERVER_HOST }}
           TARGET: "~/blog/client"
-          driver: oss
-          region: oss-cn-beijing
-
