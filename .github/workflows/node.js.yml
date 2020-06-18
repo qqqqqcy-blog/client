@@ -29,14 +29,14 @@ jobs:
 
     - name: Build Project
       run: npm install && npm run build
-      
+
     - name: Deploy to aliyun server
       uses: easingthemes/ssh-deploy@v2.1.2
       env:
-          SSH_PRIVATE_KEY: ${{ secrrets.ALIYUN_SERVER_ACCESS_TOKEN }}
+          SSH_PRIVATE_KEY: ${{ secrets.ALIYUN_SERVER_ACCESS_TOKEN }}
           ARGS: "-avzr --delete"
           SOURCE: dist
-          REMOTE_HOST: ${{ secrrets.ALIYUN_SERVER_HOST }}
+          REMOTE_HOST: ${{ secrets.ALIYUN_SERVER_HOST }}
           TARGET: "~/blog/client"
           driver: oss
           region: oss-cn-beijing
