@@ -19,8 +19,6 @@ jobs:
     steps:
     - name: Git Checkout
       uses: actions/checkout@v2
-      with:
-        ref: master
         
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
@@ -35,6 +33,7 @@ jobs:
       env:
           SSH_PRIVATE_KEY: ${{ secrets.ALIYUN_SERVER_ACCESS_TOKEN }}
           ARGS: "-avzr --delete"
-          SOURCE: build
+          SOURCE: "build/"
+          REMOTE_USER: "root"
           REMOTE_HOST: ${{ secrets.ALIYUN_SERVER_HOST }}
-          TARGET: "~/blog/client"
+          TARGET: "/root/blog/client/"
