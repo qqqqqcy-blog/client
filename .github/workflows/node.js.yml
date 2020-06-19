@@ -36,4 +36,4 @@ jobs:
           SOURCE: "build/"
           REMOTE_USER: "root"
           REMOTE_HOST: ${{ secrets.ALIYUN_SERVER_HOST }}
-          TARGET: "/root/blog/client/"
+          TARGET: "/usr/share/blog/client/"
