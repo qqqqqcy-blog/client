@@ -1,0 +1,12 @@
+@import "./normalize.scss";
+
+a {
+  text-decoration: none;
+  &:visited {
+    color: currentColor;
+  }
+}
+
+ul {
+  padding: 0;
+}

@@ -1,0 +1,37 @@
+.Nav {
+  padding: 0;
+  text-align: center;
+  list-style: none;
+
+  .Nav-item {
+    display: inline-block;
+    cursor: pointer;
+    box-sizing: border-box;
+    a {
+      color: #666;
+      padding: 1em 2em;
+      border-radius: 10px;
+      transition: background-color 0.2s;
+      &:hover {
+        background-color: #eee;
+      }
+      &:active {
+        background-color: #ddd;
+      }
+    }
+  }
+  .active a {
+    color: cadetblue;
+    font-weight: bold;
+  }
+  .Nav-item::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 1em;
+    background: #999;
+  }
+  .Nav-item:last-child::after {
+    display: none;
+  }
+}

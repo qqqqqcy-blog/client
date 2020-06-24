@@ -1,0 +1,10 @@
+.lake-codeblock-content > div {
+  overflow: scroll;
+}
+
+.Article {
+  &-title {
+    color: darkcyan;
+  }
+  margin: 0 10vw;
+}

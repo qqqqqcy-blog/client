@@ -6,6 +6,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "noImplicitAny": false,     //在表达式和声明上有隐含的any类型时报错
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,

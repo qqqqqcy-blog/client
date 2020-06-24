@@ -1,0 +1,37 @@
+.Home {
+  list-style: none;
+  color: #333;
+  padding: 0 10vw;
+  min-height: 70vh;
+  li {
+    margin: 1em 0;
+    padding: 0 3em;
+    // line-height: 4em;
+    border-radius: 10px;
+    border: 1px solid cadetblue;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    &:hover {
+      background-color: #eee;
+    }
+    &:active {
+      background-color: #ddd;
+    }
+    h2 {
+      color: darkcyan;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-top: 0;
+      color: #666;
+      font-size: 14px;
+      line-height: 1.4em;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Home {
+    padding: 0 0.4em;
+  }
+}
