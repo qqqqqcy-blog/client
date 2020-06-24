@@ -8,3 +8,18 @@
   }
   margin: 0 10vw;
 }
+
+@media screen and (max-width: 768px) {
+  .Article {
+    margin: 0 0.4em;
+
+    [data-lake-card="table"] {
+      overflow: scroll;
+      max-width: 100%;
+    }
+    img {
+      object-fit: contain;
+      max-width: 100%;
+    }
+  }
+}
