@@ -1,7 +1,14 @@
 .Nav {
-  padding: 0;
+  padding: 10px 0;
+  margin: 20px 0;
   text-align: center;
   list-style: none;
+  position: sticky;
+  top: 0;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 1) 60%,
+    rgba(0, 0, 0, 0)
+  );
 
   .Nav-item {
     display: inline-block;

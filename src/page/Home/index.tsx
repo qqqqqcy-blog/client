@@ -23,16 +23,18 @@ const Home = function () {
 
   const list = useMemo(
     () =>
-      listSource?.map(({ title, slug, description }) => {
-        return (
-          <li key={slug}>
-            <Link to={`/article/${id}/${slug}`}>
-              <h2>{title}</h2>
-              <p>{description}</p>
-            </Link>
-          </li>
-        );
-      }),
+      listSource
+        ?.filter(({ status }) => status)
+        .map(({ title, slug, description }) => {
+          return (
+            <li key={slug}>
+              <Link to={`/article/${id}/${slug}`}>
+                <h2>{title}</h2>
+                <p>{description}</p>
+              </Link>
+            </li>
+          );
+        }),
 
     [listSource, id]
   );
